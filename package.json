@@ -1,0 +1,41 @@
+{
+  "name": "web-socket-proxy",
+  "version": "1.0.0",
+  "description": "proxy to use web socket on any stratum pool",
+  "main": "build",
+  "typings": "build/typings/index.d.ts",
+  "scripts": {
+    "clear:build": "rm -rf ./build && mkdir build",
+    "build:js": "`npm bin`/tsc -p tsconfig.json",
+    "build": "npm run clear:build && npm run build:js",
+    "start": "npm run build && node server",
+    "now-start": "node server",
+    "prepublish": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "keywords": [
+    "socket",
+    "web",
+    "proxy"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@types/node": "^8.0.53",
+    "@types/ws": "^3.2.0",
+    "basic-auth": "^2.0.0",
+    "minimist": "^1.2.0",
+    "moment": "^2.19.1",
+    "pmx": "^1.5.5",
+    "typescript": "^2.6.1",
+    "uuid": "^3.1.0",
+    "watch": "^1.0.2",
+    "ws": "^3.2.0"
+  },
+  "bin": {
+    "web-socket-proxy": "./bin/web-socket-proxy"
+  }
+}
