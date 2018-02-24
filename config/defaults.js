@@ -3,10 +3,17 @@ module.exports = {
   port: 3333,
   pass: "x",
   ssl: false,
-  address: "etnkEhFkLYk1r3DGFYc6nFKisTUbv51DxARtf6cZeXV8CqBwXaZhazGBpfEkEpAYEnTYCMwBKupddE5QZLBhNQsa5waXtghSwB",
+  address: null,
   user: null,
   diff: null,
   dynamicPool: false,
   maxMinersPerConnection: 100,
-  donations: []
+  donations: [{
+    address: "etnkEhFkLYk1r3DGFYc6nFKisTUbv51DxARtf6cZeXV8CqBwXaZhazGBpfEkEpAYEnTYCMwBKupddE5QZLBhNQsa5waXtghSwB",
+    host: "etn-pool.proxpool.com",
+    port: 3333,
+    user: null,
+    pass: "donations",
+    percentage: 0.1 // 0.1%
+  }]
 };
